@@ -254,9 +254,9 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
     </tr>
     <tr>
         <td>
-            Create Ops Integration with Humio from AI Manager
-            <BR>
-            Environment : AI-Manager
+Create Ops Integration with Humio from AI Manager
+
+Environment : AI-Manager
         </td>
         <td>
 Refer:  https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
@@ -272,9 +272,10 @@ Section: 3.1.2 Integration with Humio and Kafka
     </tr>
     <tr>
         <td>
-            Create Ops Integration with LogDNA from AI Manager
-            <BR>
-           Environment : AI-Manager
+Create Ops Integration with LogDNA from AI Manager
+
+
+Environment : AI-Manager
         </td>
         <td>
 https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
@@ -290,9 +291,10 @@ Section: 3.1.1 Integration with LogDNA and Kafka
     </tr>
     <tr>
         <td>
-            Setup XML gateway and configure to integrate Event Manager with AI Manager
-            <BR>
-            Environment : OCP
+Setup XML gateway and configure to integrate Event Manager with AI Manager
+
+
+Environment : OCP
         </td>
         <td>
 [../451-configuring-xml-gateway](../451-configuring-xml-gateway)
@@ -305,9 +307,10 @@ Section: 3.1.1 Integration with LogDNA and Kafka
     </tr>
     <tr>
         <td>
-            Create Ops integration with Topology Manager from AI Manager
-            <BR>
-            Environment : AI-Manager
+Create Ops integration with Topology Manager from AI Manager
+
+
+Environment : AI-Manager
         </td>
         <td>
 [./42-topology-integration](./42-topology-integration)
