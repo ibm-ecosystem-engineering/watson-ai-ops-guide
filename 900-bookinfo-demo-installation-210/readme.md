@@ -247,59 +247,55 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
 ## 7: Integrate with various Operational Systems for Ops data ingestion
 
 <table>
-<tr>
-
-<td>
-### 7.1 Integration with Humio
-</td>
-<td>
-(Skip this section if LogDNA is used)
-
-Create Ops Integration with Humio from AI Manager
-
-Environment : AI-Manager
-</td>
-<td>
-#### Reference : 
-
-Refer:  https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
-
-Section: 3.1.2 Integration with Humio and Kafka
-</td>
-</tr>
-</table>
-### 7.2 Integration with LogDNA
-
-(Skip this section if Humio is used)
-
-Create Ops Integration with LogDNA from AI Manager
-
-Environment : AI-Manager
-
-#### Reference : 
-
-Refer:  https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
-
-Section: 3.1.1 Integration with LogDNA and Kafka
-
-### 7.3 Setup XML gateway
-
-Setup XML gateway and configure to integrate Event Manager with AI Manager
-
-Environment : OCP
-
-#### Reference : 
-
+    <tr>
+        <td>
+            7.1 Integration with Humio <BR>
+            (Skip this section if LogDNA is used)
+        </td>
+        <td>
+            Create Ops Integration with Humio from AI Manager
+            Environment : AI-Manager
+        </td>
+        <td>
+        Refer:  https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
+        Section: 3.1.2 Integration with Humio and Kafka
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7.2 Integration with LogDNA <BR>
+            (Skip this section if Humio is used)
+        </td>
+        <td>
+            Create Ops Integration with LogDNA from AI Manager
+            Environment : AI-Manager
+        </td>
+        <td>
+            Refer:  https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
+            Section: 3.1.1 Integration with LogDNA and Kafka
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7.3 Setup XML gateway
+        </td>
+        <td>
+            Setup XML gateway and configure to integrate Event Manager with AI Manager
+            Environment : OCP
+        </td>
+        <td>
 Refer :  [../451-configuring-xml-gateway](../451-configuring-xml-gateway)
-
-### 7.4 Integration with Topology Manager
-
-Create Ops integration with Topology Manager from AI Manager
-
-Environment : AI-Manager
-
-#### Reference : 
-
+        </td>
+    </tr>
+    <tr>
+        <td>
+            7.4  Integration with Topology Manager
+        </td>
+        <td>
+            Create Ops integration with Topology Manager from AI Manager
+            Environment : AI-Manager
+        </td>
+        <td>
 Refer :
 
 [./42-topology-integration](./42-topology-integration)
@@ -309,16 +305,23 @@ Other Reference :
 https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
 
 Section: 2.2.1 ASM (Netcool Agile Service Manager) Configuration
-
-### 7.34 Expose Event Manager
-
+        </td>
+    </tr>
+    <tr>
+        <td>
+           7.5  Expose Event Manager
+        </td>
+        <td>
 Need to expose Event Manager to push events.
 
 Environment : Event-Manager
-
-#### Reference : 
-
+        </td>
+        <td>
 Refer  [./82-eventmgr-expose](./82-eventmgr-expose)
+        </td>
+    </tr>
+</table>
+
 
 ## 8: Create issues in the managed environment
 
