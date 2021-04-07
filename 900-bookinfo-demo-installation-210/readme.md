@@ -254,7 +254,6 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
         </td>
     </tr>
     <tr>
-
         <td>
             Create Ops Integration with Humio from AI Manager
             Environment : AI-Manager
@@ -271,7 +270,6 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
         </td>
     </tr>
     <tr>
-
         <td>
             Create Ops Integration with LogDNA from AI Manager
             Environment : AI-Manager
@@ -288,7 +286,6 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
         </td>
     </tr>
     <tr>
-
         <td>
             Setup XML gateway and configure to integrate Event Manager with AI Manager
             Environment : OCP
@@ -296,7 +293,6 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
         <td>
 
 [../451-configuring-xml-gateway](../451-configuring-xml-gateway)
-
         </td>
     </tr>
     <tr>
@@ -305,7 +301,6 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
         </td>
     </tr>
     <tr>
-
         <td>
             Create Ops integration with Topology Manager from AI Manager
             Environment : AI-Manager
