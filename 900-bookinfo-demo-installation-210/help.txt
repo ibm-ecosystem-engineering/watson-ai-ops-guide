@@ -1,0 +1,18 @@
+OCP Tokens
+============
+
+
+scp -r files-bookinfo root@1.2.3.4:/root/iks-bookinfo/02-fluentbit
+
+
+
+humio integration
+http://1.2.3.4:8080/api/v1/repositories/sandbox/query
+{
+    "codec": "humio",
+    "message_field": "@rawstring",
+    "log_entity_types": "clusterName, kubernetes.container_image_id, kubernetes.host, kubernetes.container_name, kubernetes.pod_name",
+    "instance_id_field": "kubernetes.container_name",
+    "rolling_time": 10,
+    "timestamp_field": "@timestamp"
+}

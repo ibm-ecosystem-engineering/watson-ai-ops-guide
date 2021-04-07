@@ -1,0 +1,78 @@
+{
+    "application_group_id": "9aemlr67",
+    "application_id": "sglve7ly",
+    "timestamp": 1630112711,
+    "utc_timestamp": "2019-10-04T11:22:00.038Z",
+    "type": "incident",
+    "incident": {
+        "incident_id": "dfe4c8ec-h832-21s3-ab36-4d9539b1g333",
+        "title": "ratings : Abnormal behavior",
+        "description": "Ratings service is unavailable.",
+        "created_at": "2020-02-19T04:12:13.000Z",
+        "updated_at": "2020-02-19T04:16:23.000Z",
+        "resolved_at": "2020-02-19T02:25:25.000Z",
+        "closed_at": "2020-02-19T02:25:25.000Z",
+        "started_at": "2020-02-19T02:25:25.000Z",
+        "business_duration_ms": 23423,
+        "severity": 1,
+        "priority": 2,
+        "impact": 3,
+        "state": "new",
+        "source": {
+            "source_name": "GitHub",
+            "source_url": "https://github.com/GandhiCloudLab/ibm-ai-ops-blog/issues/1",
+            "source_incident_id": "BOK0000160",
+            "source_application_id": "tokenizer124"
+        },
+        "comments": [
+            {
+                "comment_text": "Check and make the replica of ratings deployment to 1 atleast"
+            }
+        ],
+        "resolution": {
+            "rca_id": "RCA001",
+            "resolution_summary": "Check and make the replica right"
+        },
+        "features": []
+    },
+    "meta_features": []
+}
+{
+    "application_group_id": "9aemlr67",
+    "application_id": "sglve7ly",
+    "timestamp": 1630113711,
+    "utc_timestamp": "2019-10-04T20:40:00.038Z",
+    "type": "incident",
+    "incident": {
+        "incident_id": "dfe4c8ec-h832-21s3-ab36-4d9539b1g333",
+        "title": "ratings : service down",
+        "description": "Ratings service is down.",
+        "created_at": "2020-02-19T04:12:13.000Z",
+        "updated_at": "2020-02-19T04:16:23.000Z",
+        "resolved_at": "2020-02-19T03:25:25.000Z",
+        "closed_at": "2020-02-19T03:25:25.000Z",
+        "started_at": "2020-02-19T03:25:25.000Z",
+        "business_duration_ms": 23423,
+        "severity": 1,
+        "priority": 2,
+        "impact": 3,
+        "state": "new",
+        "source": {
+            "source_name": "GitHub",
+            "source_url": "https://github.com/GandhiCloudLab/ibm-ai-ops-blog/issues/1",
+            "source_incident_id": "BOK0000161",
+            "source_application_id": "tokenizer124"
+        },
+        "comments": [
+            {
+                "comment_text": "Check and make the replica of ratings deployment to 1 atleast"
+            }
+        ],
+        "resolution": {
+            "rca_id": "RCA001",
+            "resolution_summary": "Check and make the replica right"
+        },
+        "features": []
+    },
+    "meta_features": []
+}

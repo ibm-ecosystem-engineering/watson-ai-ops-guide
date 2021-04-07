@@ -1,0 +1,32 @@
+humio-fluentbit:
+  enabled: true
+  humioRepoName: sandbox
+  humioHostname: 1.2.3.4
+  es:
+    port: 8080
+    tls: false # TLS On. Set to false to turn it off.
+    tls_verify: false # TLS verify On. Set to false to turn it off.
+    autodiscovery: false
+
+  # Example of custom fluentbit config
+  customFluentBitConfig:
+
+  # Example of custom input config
+  inputConfig: |-
+    [INPUT]
+        Name             tail
+        Path             /var/log/containers/*bookinfo*.log
+        Parser           docker
+        Tag              kube.*
+        Refresh_Interval 5
+        Mem_Buf_Limit    256MB
+        Skip_Long_Lines  On
+
+    [INPUT]
+        Name             tail
+        Path             /tmp/logs2/*.*
+        Parser           docker
+        Tag              kube.*
+        Refresh_Interval 5
+        Mem_Buf_Limit    5MB
+        Skip_Long_Lines  On 

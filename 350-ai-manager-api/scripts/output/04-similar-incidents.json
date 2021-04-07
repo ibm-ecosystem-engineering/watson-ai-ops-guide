@@ -1,0 +1,56 @@
+{
+    "similar_incidents": [
+        {
+            "title": "ratings : service down",
+            "incident_id": "dfe4c8ec-h832-21s3-ab36-4d9539b1g333",
+            "explanation": "Based on similarity from query and incidents",
+            "resolution": "Check and make the replica right",
+            "score": 0.15282331,
+            "url": "https://github.com/GandhiCloudLab/ibm-ai-ops-blog/issues/1",
+            "started_at": "2020-02-09T08:32:32Z",
+            "actions": [
+                {
+                    "action": {
+                        "text": "scaled",
+                        "begin_offset": 12,
+                        "end_offset": 28
+                    },
+                    "components": [
+                        {
+                            "text": "Ratings Deployment",
+                            "begin_offset": 0,
+                            "end_offset": 12
+                        }
+                    ]
+                }
+            ],
+            "incident_number": "BACD989493"
+        },
+        {
+            "title": "ratings : Abnormal behavior",
+            "incident_id": "dfe4c8ec-h832-21s3-ab36-4d9539b1g333",
+            "explanation": "Based on similarity from query and incidents",
+            "resolution": "Check and make the replica of ratings deployment to 1 atleast",
+            "score": 0.23453721,
+            "url": "https://github.com/GandhiCloudLab/ibm-ai-ops-blog/issues/1",
+            "started_at": "2019-09-11T07:57:58Z",
+            "actions": [
+                {
+                    "action": {
+                        "text": "scaled",
+                        "begin_offset": 12,
+                        "end_offset": 28
+                    },
+                    "components": [
+                        {
+                            "text": "Ratings Deployment",
+                            "begin_offset": 0,
+                            "end_offset": 12
+                        }
+                    ]
+                }
+            ],
+            "incident_number": "BACD989423"
+        }
+    ]
+}

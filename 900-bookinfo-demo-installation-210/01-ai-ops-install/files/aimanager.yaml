@@ -1,0 +1,84 @@
+apiVersion: v1
+items:
+- apiVersion: ai-manager.watson-aiops.ibm.com/v1beta1
+  kind: AIManager
+  metadata:
+    name: aimanager
+    namespace: aiops
+  spec:
+    aimanagerValues:
+      postgres:
+        keeper:
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 256Mi
+        livenessProbe:
+          failureThreshold: 5
+          initialDelaySeconds: 300
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 15
+        readinessProbe:
+          failureThreshold: 5
+          initialDelaySeconds: 300
+          periodSeconds: 15
+          successThreshold: 1
+          timeoutSeconds: 15
+        sentinel:
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 256Mi
+    elasticsearch:
+      storage:
+        enabled: true
+        storageClassName: ibmc-file-gold-gid
+        storageSize: 100Gi
+    existingPullSecret:
+      name: cp.stg.icr.io
+    flink:
+      storage:
+        enabled: true
+        storageClassName: ibmc-file-gold-gid
+        storageSize: 1Gi
+      taskmanager:
+        replicas: 1
+        taskmanagerSlots: 12
+    kafka:
+      autoTopicCreation: true
+      storage:
+        enabled: true
+        storageClassName: ibmc-file-gold-gid
+        storageSize: 20Gi
+    license:
+      accept: true
+    minio:
+      storage:
+        enabled: true
+        storageClassName: ibmc-file-gold-gid
+        storageSize: 100Gi
+    modelTrain:
+      maxLearners: 10
+      pollInterval: 60
+      sizeLimit: 1000
+    postgres:
+      storage:
+        enabled: true
+        storageClassName: ibmc-file-gold-gid
+        storageSize: 20Gi
+    repo: ""
+    size: small
+    storage:
+      enabled: true
+      storageClassName: ibmc-file-gold-gid
+    version: 2.1.0
+    zen:
+      storage:
+        storageClassName: ibmc-file-gold-gid
