@@ -253,12 +253,12 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
         </td>
     </tr>
     <tr>
-        <td>
+        <td width="50%">
 Create Ops Integration with Humio from AI Manager
 
 Environment : AI-Manager
         </td>
-        <td>
+        <td width="50%">>
 Refer:  https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
 
 
