@@ -1,10 +1,14 @@
 # Training Events
 
-1. Update the parameters in the `/scripts/00-config.sh`
+## 1. Update Config.sh
 
-2. Run the file `/scripts/01-events-training.sh`
+Update the parameters in `/scripts/00-config.sh`
 
-it may print like this. you can execute the command one by one.
+## 2. Start Training
+
+1. Run the file `/scripts/01-events-training.sh`
+
+it may print like this. 
 
 ```bash
 ........................................................................
@@ -18,3 +22,4 @@ python3 train_pipeline.pyc -p "event" -g "abcdefgh" -a "8a2z45ds" -v "1"
 
 ```
 
+2. Run the above commands one by one.

@@ -1,10 +1,14 @@
 # Training Similar Incidents
 
-1. Update the parameters in the `/scripts/00-config.sh`
+## 1. Update Config.sh
 
-2. Run the file `/scripts/01-incidents-training.sh`
+Update the parameters in `/scripts/00-config.sh`
 
-it may print like this. you can execute the command one by one.
+## 2. Start Training
+
+1. Run the file `/scripts/01-incidents-training.sh`
+
+it may print like this. 
 
 ```bash
 ........................................................................
@@ -19,3 +23,4 @@ bash index_incidents.sh s3://similar-incident-service/abcdefgh/8a2z45ds/incident
 
 ```
 
+2. Run the above commands one by one.

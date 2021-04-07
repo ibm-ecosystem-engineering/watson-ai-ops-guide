@@ -197,12 +197,21 @@ Environment : AI-Manager
 
 ### 6.1 Log anomaly detection
 
-For log anomaly detection
-- load the app using ab, jMeter (or such tool)
-- collect the normal logs
-- train the models in AI Manager
+#### 6.1.1 Generate Load
 
-#### Reference : 
+Generate the load for the bookinfo app.
+
+[./19-bookinfo-load-generation](./19-bookinfo-load-generation)
+
+#### 6.1.2 Download logs
+
+Collect the normal logs.
+
+[./20-download-logs](./20-download-logs)
+
+#### 6.1.3 Start Trainiing
+
+Train the models in AI Manager.
 
 Refer :  [./50-training-logs](./50-training-logs)
 
@@ -239,6 +248,8 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
 
 ### 7.1 Integration with Humio
 
+(Skip this section if LogDNA is used)
+
 Create Ops Integration with Humio from AI Manager
 
 Environment : AI-Manager
@@ -248,6 +259,20 @@ Environment : AI-Manager
 Refer:  https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
 
 Section: 3.1.2 Integration with Humio and Kafka
+
+### 7.2 Integration with LogDNA
+
+(Skip this section if Humio is used)
+
+Create Ops Integration with LogDNA from AI Manager
+
+Environment : AI-Manager
+
+#### Reference : 
+
+Refer:  https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
+
+Section: 3.1.1 Integration with LogDNA and Kafka
 
 ### 7.2 Setup XML gateway
 

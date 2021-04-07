@@ -1,30 +1,19 @@
 # Training Logs
 
+## 1. Copy the Download logs
 
-1. Download the logs file and copy to `/training-files/1/humio-logs.json`
+Copy the Download logs from logDNA/Humio to `/training-files/1/logs.json`
 
-2. Run the below command to see, how much lings of log the file contains.
+## 2. Update Config.sh
 
-```bash
+Update the parameters in `/scripts/00-config.sh`
 
-cd training-files/1
+## 3. Start Training
 
-sed 's/kubernetes.labels.app/kubernetes_labels_app/g' humio-logs.json | jq ."kubernetes_labels_app" | sort | uniq -c
+1. Run the file `/scripts/01-logs-training.sh`
 
-12000 "details"
-114000 "productpage"
-6000 "ratings"
-12000 "reviews"
+it may print like this. 
 
-```
-
-Here each service contains more that 2000 records and it is good to for training.
-
-2. Update the parameters in the `/scripts/00-config.sh`
-
-3. Run the file `/scripts/01-logs-training.sh`
-
-it may print like this. you can execute the command one by one.
 
 ```bash
 ........................................................................
@@ -43,3 +32,4 @@ python3 train_pipeline.pyc -p "log" -g "abcdefgh" -a "8a2z45ds" -v "1"
 
 ```
 
+2. Run the above commands one by one

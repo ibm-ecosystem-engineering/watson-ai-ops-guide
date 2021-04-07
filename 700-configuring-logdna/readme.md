@@ -27,7 +27,7 @@ The logDNA keys are available here. It will be useful for agents and AI-Manager 
 
 To collect logs from the application that installed on a Cluster, we need to have LogDNA agent installed in the cluster, where the application is installed. We can apply appropriate filter to send only the application logs to LogDNA.
 
-### Connecting a LogDNA agent to an OpenShift cluster
+### 2.1 Connecting a LogDNA agent to an OpenShift cluster
 
 The IBM Cloud documentation is available here. https://cloud.ibm.com/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-config_agent_os_cluster
 
@@ -96,7 +96,7 @@ oc apply -f logdna-agent-ds-os.yaml
 <img src="images/03-logdna-logs.png">
 
 
-### Connecting LogDNA agent to Kubernetes cluster
+### 2.2 Connecting LogDNA agent to Kubernetes cluster
 
 If you want to connect to Kubernetes cluster, you can follow the IBM Cloud documentation https://cloud.ibm.com/docs/Log-Analysis-with-LogDNA?topic=Log-Analysis-with-LogDNA-config_agent_kube_cluster
 
@@ -124,9 +124,7 @@ This is using the apache bench to create the load. https://httpd.apache.org/docs
 You might have received enough logs in the LogDNA for training.
 
 
-## 4. Download Logs from LogDNA
-
-### Download from LogDNA UI
+## 4. Download Logs from LogDNA throgh UI
 
 You can download logs from the UI. It can export the lines currently filtered and it will sent a link to mail for download. But there is a restriction in size. 
 
@@ -136,22 +134,48 @@ It is better to use scripts to download the logs.
 
 <img src="images/04-logdna-export2.png">
 
-### Download from LogDNA using Script
+## 5. Download Logs from LogDNA using Script
 
-You can download logs from logdna through scripts.
+You can download logs from logdna through scripts. It is better to use scripts to download the logs. 
 
-It is better to use scripts to download the logs. Here is the script to download logs between a time range.
+
+Here is the script to download logs between a time range.
 
 ```
-curl "https://api.us-south.logging.cloud.ibm.com/v1/export?from=1613239459000&to=1613246659000&size=30000" -u << LOG_DNA_SERVICE_KEY >> > log.txt
+curl "https://api.us-south.logging.cloud.ibm.com/v1/export?from=1613239459000&to=1613246659000&size=10000" -u LOG_DNA_SERVICE_KEY >> log.txt
 ```
 
-LOG_DNA_SERVICE_KEY : LogDNA Service Key
+- LOG_DNA_SERVICE_KEY : LogDNA Service Key
+- 1613239459000 : From time InMilliseconds
+- 1613239459000 : To time InMilliseconds
+- 10000 : No. of lines to be downloaded
 
-1613239459000 : From time InMilliseconds
+Use https://www.epochconverter.com/ for time conversion.
 
-1613239459000 : To time InMilliseconds
 
-30000 : No. of lines to be downloaded
+It is better to download 10K Lines of log at a time.
+
+### To download logs from 10:30 AM to 10:45 AM today
+
+1. Split the time into 5 minutes slab like 
+  - 10:30 to 10:35
+  - 10:36 to 10:40
+  - 10:41 to 10:45
+
+2. Take the first slab, convert the from-time and to-time using epoch covertor.
+
+3. Update the script with the from-time and to-time and run the script.
+
+```
+curl "https://api.us-south.logging.cloud.ibm.com/v1/export?from=1613239459000&to=1613246659000&size=10000" -u LOG_DNA_SERVICE_KEY >> log.txt
+```
+
+4. Hope you might have received all the records between the time. Verify that by converting the timestamp in the last lines of the log. Otherwise decrease the slab from 5 minutes to 4 and so on.
+
+5. Repeat the steps for each slap. For each slab the file get append to log.txt as we use >>
+
+6. Now the logs are downloaded and available in log.txt.
+
+
 
 
