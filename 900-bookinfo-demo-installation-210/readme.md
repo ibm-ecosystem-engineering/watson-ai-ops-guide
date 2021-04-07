@@ -248,13 +248,15 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
 
 <table>
     <tr>
-        <td width="30%"> Title</td>
-        <td width="40%"> Description</td>
-        <td width="10%">>Environment</td>
-        <td width="20%">>Reference</td>
+        <td width="4%">S.No</td>
+        <td width="28%">Title</td>
+        <td width="40%">Description</td>
+        <td width="8%">Environment</td>
+        <td width="20%">Reference</td>
     </tr>
     <tr>
-        <td>7.1 Integration with Humio <BR> (Skip this section if LogDNA is used)</td>
+        <td>7.1</td>
+        <td>Integration with Humio <BR> (Skip this section if LogDNA is used)</td>
         <td>Create Ops Integration with Humio from AI Manager</td>
         <td>AI-Manager</td>
         <td>
@@ -265,7 +267,8 @@ Section: 3.1.2 Integration with Humio and Kafka
         </td>
     </tr>
     <tr>
-       <td>7.2 Integration with LogDNA (Skip this section if Humio is used)</td>
+        <td>7.2</td>
+       <td>Integration with LogDNA (Skip this section if Humio is used)</td>
         <td>Create Ops Integration with LogDNA from AI Manager</td>
         <td>AI-Manager</td>
         <td>
@@ -276,13 +279,15 @@ Section: 3.1.1 Integration with LogDNA and Kafka
         </td>
     </tr>
     <tr>
-        <td>7.3 Setup XML gateway</td>
+        <td>7.3</td>
+        <td>Setup XML gateway</td>
         <td>Setup XML gateway and configure to integrate Event Manager with AI Manager </td>
         <td>OCP</td>
         <td>[../451-configuring-xml-gateway](../451-configuring-xml-gateway)</td>
     </tr>
     <tr>
-        <td>7.4  Integration with Topology Manager</td>
+        <td>7.4</td>
+        <td>Integration with Topology Manager</td>
         <td>Create Ops integration with Topology Manager from AI Manager</td>
         <td>AI-Manager</td>
         <td>
@@ -296,7 +301,8 @@ Section: 2.2.1 ASM (Netcool Agile Service Manager) Configuration
         </td>
     </tr>
     <tr>
-        <td>7.5  Expose Event Manager</td>
+        <td>7.5</td>
+        <td>Expose Event Manager</td>
         <td>Need to expose Event Manager to push events.</td>
         <td>AI-Manager</td>
         <td>[./82-eventmgr-expose](./82-eventmgr-expose)</td>
