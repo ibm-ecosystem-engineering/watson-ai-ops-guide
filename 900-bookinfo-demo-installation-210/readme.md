@@ -68,6 +68,35 @@ https://community.ibm.com/community/user/integration/blogs/jeya-gandhi-rajan-m1/
 Section : 1. Install BookInfo app in Kubernetes or Openshift
 
 
+
+
+<table>
+    <tr>
+        <td width="4%">S.No</td>
+        <td width="28%">Title</td>
+        <td width="40%">Description</td>
+        <td width="8%">Environment</td>
+        <td width="20%">Reference</td>
+    </tr>
+    <tr>
+        <td>3.1</td>
+        <td> Install Bookinfo app</td>
+        <td>Install Bookinfo app on the managed environment. Pick a namespace for this app as `bookinfo`.</td>
+        <td>
+[../501-install-bookinfo-app-iks](../501-install-bookinfo-app-iks)
+
+Other Reference : 
+
+https://community.ibm.com/community/user/integration/blogs/jeya-gandhi-rajan-m1/2021/02/14/log-anomaly-detection-by-ai-manager-in-w-ai-ops
+
+Section : 1. Install BookInfo app in Kubernetes or Openshift
+        </td>
+    </tr>
+                
+</table>
+
+
+
 ## 4: Setup Operational Systems
 
 ### 4.1 LogDNA
@@ -141,107 +170,144 @@ Environment : Slack
 https://slack.com/get-started#/create
 
 
+
 ## 5: Setup Initial Configurations in Watson AIOps 2.1
 
-### 5.1 Integrate with Slack
-
-Integrate with Slack collaboration platform. Need to copy nginx certificate as well.
-
-Environment : AI-Manager
-
-#### Reference : 
-
+<table>
+    <tr>
+        <td width="4%">S.No</td>
+        <td width="28%">Title</td>
+        <td width="40%">Description</td>
+        <td width="8%">Environment</td>
+        <td width="20%">Reference</td>
+    </tr>
+    <tr>
+        <td>5.1</td>
+        <td>Integrate with Slack</td>
+        <td>Integrate with Slack collaboration platform. Need to copy nginx certificate as well.</td>
+        <td>AI-Manager</td>
+        <td>
+            
 [./22-slack](./22-slack)
-
-
-### 5.2 Create application groups and applications
-
-Create application groups and applications
-
-Environment : AI-Manager
-
-#### Reference :
-
+        </td>
+    </tr>
+    <tr>
+        <td>5.2</td>
+        <td>Create application groups and applications</td>
+        <td>Create application groups and applications
+</td>
+        <td>AI-Manager</td>
+        <td>
+        
 https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
 
 Section : 
 - 2.1 Application Group Configuration
-- 2.3 Application at Application Group Level
-
-### 5.3 Prepare Topology
-
-Create the topology of bookinfo in the Topology Manager.
-
-Environment : Topology Manager
-
-#### Reference : 
-
-Refer :  [./32-topology-creation](./32-topology-creation)
+- 2.3 Application at Application Group Level    
+        </td>
+    </tr>
+    <tr>
+    <td> 5.3</td>
+    <td>Prepare Topology</td>
+    <td>Create the topology of bookinfo in the Topology Manager.</td>
+    <td>Topology-Manager</td>
+    <td>
+    Refer :  [./32-topology-creation](./32-topology-creation)
 
 Other Reference :  https://github.com/GandhiCloudLab/ibm-ai-ops-blog/tree/master/400-topology-observer-job-config
+    </td>
+    </tr>
+    <tr>
+        <td>5.4</td>
+        <td>Create runbooks</td>
+        <td>Create runbooks in 'Event Manager' to resolve the issue (to scale the pod count to 1)</td>
+        <td>Event-Manager</td>
+        <td>
+[./62-runbook](./62-runbook)        
+        </td>
+    </tr>
+                
+</table>
 
 
-### 5.4 Create runbooks
-
-Create runbooks in 'Event Manager' to resolve the issue (to scale the pod count to 1)
-
-Environment : Event-Manager
-
-#### Reference : 
-
-[./62-runbook](./62-runbook)
 
 ## 6: Train the Models in AI Manager
 
 Environment : AI-Manager
 
-### 6.1 Log anomaly detection
-
-#### 6.1.1 Generate Load
-
-Generate the load for the bookinfo app.
+<table>
+    <tr>
+        <td width="4%">S.No</td>
+        <td width="28%">Title</td>
+        <td width="48%">Description</td>
+        <td width="20%">Reference</td>
+    </tr>
+    <tr>
+        <td>6.1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+        </td>
+    </tr>
+    <tr>
+        <td>6.1.1</td>
+        <td>Generate Load</td>
+        <td>Generate the load for the bookinfo app.</td>
+        <td>
 
 [./19-bookinfo-load-generation](./19-bookinfo-load-generation)
-
-#### 6.1.2 Download logs
-
-Collect the normal logs.
-
+        </td>
+    </tr>
+    <tr>
+        <td>6.1.2</td>
+        <td>Download logs</td>
+        <td>Collect the normal logs.</td>
+        <td>
 [./20-download-logs](./20-download-logs)
-
-#### 6.1.3 Start Trainiing
-
-Train the models in AI Manager.
-
+        </td>
+    </tr>
+    <tr>
+        <td>6.1.3</td>
+        <td>Start Training</td>
+        <td>Train the models in AI Manager.</td>
+        <td>
 Refer :  [./50-training-logs](./50-training-logs)
 
 Other Reference : https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/10/training-log-anomaly-models-for-ai-manager
-
-
-### 6.2 Event group in AI Manager
-
+        </td>
+    </tr>        
+    <tr>
+        <td>6.2</td>
+        <td>Event group in AI Manager</td>
+        <td>
 For event group in AI Manager
 - get sample events
-- train the models in AI Manager
-
-#### Reference :
-
+- train the models in AI Manager        
+        </td>
+        <td>
 Refer :  [./51-training-events](./51-training-events)
 
-Other Reference : https://community.ibm.com/community/user/integration/blogs/jeya-gandhi-rajan-m1/2021/02/23/training-events-for-ai-manager-in-watson-aiops
-
-
-### 6.3 Similar incidents and next-best-action
-
+Other Reference : https://community.ibm.com/community/user/integration/blogs/jeya-gandhi-rajan-m1/2021/02/23/training-events-for-ai-manager-in-watson-aiops        
+        </td>
+    </tr>
+    <tr>
+        <td>6.3</td>
+        <td>Similar incidents and next-best-action</td>
+        <td>
 For similar incidents and next-best-action
 - get sample incidents from ServiceNow (or such tool)
 - train the models in AI Manager
-
-#### Reference : 
+        </td>
+        <td>
 
 Refer :  [./52-training-similar-incidents](./52-training-similar-incidents)
 
-Other Reference : https://community.ibm.com/community/user/integration/blogs/jeya-gandhi-rajan-m1/2021/02/23/training-similar-incidents-for-ai-manager-in-watso
+Other Reference : https://community.ibm.com/community/user/integration/blogs/jeya-gandhi-rajan-m1/2021/02/23/training-similar-incidents-for-ai-manager-in-watso        
+        </td>
+    </tr>
+                
+</table>
 
 
 ## 7: Integrate with various Operational Systems for Ops data ingestion
