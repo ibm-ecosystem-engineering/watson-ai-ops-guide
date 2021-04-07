@@ -51,31 +51,11 @@ Environment : User Laptop
 
 Environment : Managed Env
 
-### 3.1 Install Bookinfo app
-
-Install Bookinfo app on the managed environment. Pick a namespace for this app as `bookinfo`.
-
-#### Reference : 
-
-Refer :
-
-[../501-install-bookinfo-app-iks](../501-install-bookinfo-app-iks)
-
-Other Reference : 
-
-https://community.ibm.com/community/user/integration/blogs/jeya-gandhi-rajan-m1/2021/02/14/log-anomaly-detection-by-ai-manager-in-w-ai-ops
-
-Section : 1. Install BookInfo app in Kubernetes or Openshift
-
-
-
-
 <table>
     <tr>
         <td width="4%">S.No</td>
         <td width="28%">Title</td>
         <td width="40%">Description</td>
-        <td width="8%">Environment</td>
         <td width="20%">Reference</td>
     </tr>
     <tr>
@@ -99,75 +79,93 @@ Section : 1. Install BookInfo app in Kubernetes or Openshift
 
 ## 4: Setup Operational Systems
 
-### 4.1 LogDNA
-
-Skip this section, if you go for Humio
-
-#### 4.1.1 Installing LogDNA
-
-Configure LogDNA instance in IBM cloud.
-
-Environment : IBM Cloud
-
-##### Reference : 
-
+<table>
+    <tr>
+        <td width="4%">S.No</td>
+        <td width="28%">Title</td>
+        <td width="40%">Description</td>
+        <td width="8%">Environment</td>
+        <td width="20%">Reference</td>
+    </tr>
+    <tr>
+        <td>4.1</td>
+        <td colspan="3">LogDNA</td>
+    </tr>
+    <tr>
+        <td>4.1.1 </td>
+        <td>Installing LogDNA</td>
+        <td>Configure LogDNA instance in IBM cloud</td>
+        <td>IBM Cloud</td>
+        <td>
+            
 [../700-configuring-logdna](../700-configuring-logdna)
 
 Section : 1. Create LogDNA Instance
-
-#### 4.1.2 Install LogDNA Agent
-
-Install LogDNA Agent instance in Managed env, where the app is installed.
-
-Environment : Managed env.
-
-##### Reference : 
-
+        </td>
+    </tr>    
+    <tr>
+        <td>4.1.2 </td>
+        <td>Install LogDNA Agent</td>
+        <td>Install LogDNA Agent instance in Managed env, where the app is installed.</td>
+        <td>Managed env</td>
+        <td>
+            
 Refer 1:
 
 [../701-configuring-logdna-agent-iks](../701-configuring-logdna-agent-iks)
 
 Refer 2: https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-config_agent_kube_cluster
+        </td>
+    </tr>   
+    <tr>
+        <td>4.2</td>
+        <td>Humio</td>
+        <td>Install LogDNA Agent instance in Managed env, where the app is installed.</td>
+        <td>Managed env</td>
+        <td>
+            
+Refer 1:
 
-### 4.2 Humio
+[../701-configuring-logdna-agent-iks](../701-configuring-logdna-agent-iks)
 
-Skip this section, if you go for LogDNA
-
-### 4.2.1 Install Humio
-
-Setup Humio on a single node (16 core, 64 GB)
-
-Environment : Any VM
-
-#### Reference : 
-
-https://github.com/diimallya/humio-single-node
-
-
-### 4.2.2 Install fluentbit
-
-Push the bookinfo logs to Humio (using Fluent-bit data shipper)
+Refer 2: https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-config_agent_kube_cluster
+        </td>
+    </tr>   
+    <tr>
+        <td>4.2.1 </td>
+        <td>Install Humio</td>
+        <td>Setup Humio on a single node (16 core, 64 GB)</td>
+        <td>Any VM</td>
+        <td>
+            https://github.com/diimallya/humio-single-node
+        </td>
+    </tr>   
+    <tr>
+        <td>4.2.2 </td>
+        <td>Install fluentbit</td>
+        <td>
+        Push the bookinfo logs to Humio (using Fluent-bit data shipper)
 
 Configure Fluentbit to push logs corresponding to bookinfo namespace only (or else there would be too much traffic on the network and also storage gets filed on humio vm quickly).
-
-Environment : Managed env
-
-#### Reference : 
-
+</td>
+        <td>Managed env</td>
+        <td>
 Refer: [./14-fluentbit/iks](./14-fluentbit/iks)
 
 Other Reference : https://docs.humio.com/docs/ingesting-data/log-formats/kubernetes/
-
-
-### 4.3 Create Slack acccount
-
-Setup free slack account and create workspace
-
-Environment : Slack
-
-#### Reference : 
-
+        </td>
+    </tr>   
+    <tr>
+        <td>4.3 </td>
+        <td>Create Slack acccount</td>
+        <td>Setup free slack account and create workspace</td>
+        <td>Slack</td>
+        <td>
 https://slack.com/get-started#/create
+        </td>
+    </tr>   
+
+  </table>
 
 
 
@@ -212,7 +210,7 @@ Section :
     <td>Create the topology of bookinfo in the Topology Manager.</td>
     <td>Topology-Manager</td>
     <td>
-    Refer :  [./32-topology-creation](./32-topology-creation)
+Refer :  [./32-topology-creation](./32-topology-creation)
 
 Other Reference :  https://github.com/GandhiCloudLab/ibm-ai-ops-blog/tree/master/400-topology-observer-job-config
     </td>
@@ -244,7 +242,7 @@ Environment : AI-Manager
     </tr>
     <tr>
         <td>6.1</td>
-        <td></td>
+        <td>Training Normal Logs </td>
         <td></td>
         <td></td>
         <td>
