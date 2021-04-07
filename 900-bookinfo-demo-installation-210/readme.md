@@ -248,35 +248,26 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
 
 <table>
     <tr>
-        <td colspan="2">
-            7.1 Integration with Humio  (Skip this section if LogDNA is used)
-        </td>
+        <td width="30%"> Title</td>
+        <td width="40%"> Description</td>
+        <td width="10%">>Environment</td>
+        <td width="20%">>Reference</td>
     </tr>
     <tr>
-        <td width="50%">
-Create Ops Integration with Humio from AI Manager
-
-Environment : AI-Manager
-        </td>
-        <td width="50%">>
-Refer:  https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
+        <td>7.1 Integration with Humio <BR> (Skip this section if LogDNA is used)</td>
+        <td>Create Ops Integration with Humio from AI Manager</td>
+        <td>AI-Manager</td>
+        <td>
+https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
 
 
 Section: 3.1.2 Integration with Humio and Kafka
         </td>
     </tr>
     <tr>
-       <td colspan="2">
-            7.2 Integration with LogDNA (Skip this section if Humio is used)
-        </td>
-    </tr>
-    <tr>
-        <td>
-Create Ops Integration with LogDNA from AI Manager
-
-
-Environment : AI-Manager
-        </td>
+       <td>7.2 Integration with LogDNA (Skip this section if Humio is used)</td>
+        <td>Create Ops Integration with LogDNA from AI Manager</td>
+        <td>AI-Manager</td>
         <td>
 https://community.ibm.com/community/user/aiops/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
 
@@ -285,33 +276,15 @@ Section: 3.1.1 Integration with LogDNA and Kafka
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-            7.3 Setup XML gateway
-        </td>
+        <td>7.3 Setup XML gateway</td>
+        <td>Setup XML gateway and configure to integrate Event Manager with AI Manager </td>
+        <td>OCP</td>
+        <td>[../451-configuring-xml-gateway](../451-configuring-xml-gateway)</td>
     </tr>
     <tr>
-        <td>
-Setup XML gateway and configure to integrate Event Manager with AI Manager
-
-
-Environment : OCP
-        </td>
-        <td>
-[../451-configuring-xml-gateway](../451-configuring-xml-gateway)
-        </td>
-    </tr>
-    <tr>
-        <td colspan="2">
-            7.4  Integration with Topology Manager
-        </td>
-    </tr>
-    <tr>
-        <td>
-Create Ops integration with Topology Manager from AI Manager
-
-
-Environment : AI-Manager
-        </td>
+        <td>7.4  Integration with Topology Manager</td>
+        <td>Create Ops integration with Topology Manager from AI Manager</td>
+        <td>AI-Manager</td>
         <td>
 [./42-topology-integration](./42-topology-integration)
 
@@ -323,19 +296,10 @@ Section: 2.2.1 ASM (Netcool Agile Service Manager) Configuration
         </td>
     </tr>
     <tr>
-        <td colspan="2">
-           7.5  Expose Event Manager
-        </td>
-    </tr>
-    <tr>
-        <td>
-Need to expose Event Manager to push events.
-
-Environment : Event-Manager
-        </td>
-        <td>
-[./82-eventmgr-expose](./82-eventmgr-expose)
-        </td>
+        <td>7.5  Expose Event Manager</td>
+        <td>Need to expose Event Manager to push events.</td>
+        <td>AI-Manager</td>
+        <td>[./82-eventmgr-expose](./82-eventmgr-expose)</td>
     </tr>
 </table>
 
