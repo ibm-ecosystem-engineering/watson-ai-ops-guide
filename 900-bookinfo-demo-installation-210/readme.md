@@ -248,7 +248,7 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
 
 <table>
     <tr>
-        <td colspan=2>
+        <td colspan="2">
             7.1 Integration with Humio <BR>
             (Skip this section if LogDNA is used)
         </td>
@@ -265,7 +265,7 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
         </td>
     </tr>
     <tr>
-        <td colspan=2>
+       <td colspan="2">
             7.2 Integration with LogDNA <BR>
             (Skip this section if Humio is used)
         </td>
@@ -283,7 +283,7 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
         </td>
     </tr>
     <tr>
-        <td colspan=2>
+        <td colspan="2">
             7.3 Setup XML gateway
         </td>
     </tr>
@@ -300,7 +300,7 @@ Other Reference : https://community.ibm.com/community/user/integration/blogs/jey
         </td>
     </tr>
     <tr>
-        <td colspan=2>
+        <td colspan="2">
             7.4  Integration with Topology Manager
         </td>
     </tr>
@@ -321,7 +321,7 @@ Section: 2.2.1 ASM (Netcool Agile Service Manager) Configuration
         </td>
     </tr>
     <tr>
-        <td colspan=2>
+        <td colspan="2">
            7.5  Expose Event Manager
         </td>
     </tr>
