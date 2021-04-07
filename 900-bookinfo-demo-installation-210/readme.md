@@ -120,16 +120,9 @@ Refer 2: https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-config_agent
     <tr>
         <td>4.2</td>
         <td>Humio</td>
-        <td>Install LogDNA Agent instance in Managed env, where the app is installed.</td>
-        <td>Managed env</td>
-        <td>
-            
-Refer 1:
-
-[../701-configuring-logdna-agent-iks](../701-configuring-logdna-agent-iks)
-
-Refer 2: https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-config_agent_kube_cluster
-        </td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>   
     <tr>
         <td>4.2.1 </td>
@@ -150,6 +143,7 @@ Configure Fluentbit to push logs corresponding to bookinfo namespace only (or el
 </td>
         <td>Managed env</td>
         <td>
+
 Refer: [./14-fluentbit/iks](./14-fluentbit/iks)
 
 Other Reference : https://docs.humio.com/docs/ingesting-data/log-formats/kubernetes/
