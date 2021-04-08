@@ -2,17 +2,17 @@
 
 ## Update config.sh
 
-### 1. OCP Server
+#### 1. OCP Server
 
 Update `OCP_SERVER`
 
-### 2. OCP Token
+#### 2. OCP Token
 
 Update the permanent OCP token by doing below.
 
-1. Change the namespaces in the file  `files/token.yaml` to WAi-Ops namespace.
+1. Change the namespaces in the file  `files/token.yaml` to your AI-Ops namespace.
 
-2. Deploy the token yaml file
+2. Deploy the yaml file
 
  ```
  oc apply -f ./files/token.yaml
@@ -30,7 +30,7 @@ oc get secrets runbook-service-account -n aiops
 oc get secrets runbook-service-account-????????? -n aiops -o yaml
 ```
 
-5. Decode the secrte like the below
+5. Decode the secret like the below
 
 ```
 echo "AAAAAAAA" |base64 --decode
@@ -42,15 +42,17 @@ echo "AAAAAAAA" |base64 --decode
 OCP_TOKEN=""
 ```
 
-### 3. IBM Cloud API Key
+#### 3. IBM Cloud API Key
 
-Create IBM Cloud API Key for accessing IKS Cluster using the link [../../602-accessing-iks-cluster-using-api-key](../../602-accessing-iks-cluster-using-api-keys) and update the below property.
+1. Create IBM Cloud API Key for accessing IKS Cluster using the link [../../602-accessing-iks-cluster-using-api-key](../../602-accessing-iks-cluster-using-api-keys) 
+
+2. Update the below property.
 
 ```
 IBMCLOUD_API_KEY=
 ```
 
-### 3. IBM Cloud API Key
+#### 4. IKS Cluster Id
 
 Update the iks cluster id in the below property.
 
@@ -58,7 +60,7 @@ Update the iks cluster id in the below property.
 IKS_CLUSTER_ID=csadfdasd0ohsnstmnnqg
 ```
 
-### 3. application Url
+#### 5. Application Url
 
 Update the bookinfo app url
 
