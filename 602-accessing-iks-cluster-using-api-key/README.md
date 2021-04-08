@@ -10,7 +10,7 @@ Login into IBM Cloud https://cloud.ibm.com/
 
 ### 1.2. Goto API Keys Page
 
-Click on `Manager --> Access (IAM) --> API Keys`
+Click on `Manage --> Access (IAM) --> API Keys`
 
 You may see the screen like the below.
 
@@ -47,7 +47,7 @@ You may see the created key in the screen like the below.
 
 Login into IBM Cloud using API Key.
 
-Here API_KEY_VALUEEEEEE to be replaced with api-key got from the above section.
+- Replace API_KEY_VALUEEEEEE with `api-key` got from the above section.
 
 ```bash
 ibmcloud login --apikey API_KEY_VALUEEEEEE
@@ -57,8 +57,8 @@ ibmcloud login --apikey API_KEY_VALUEEEEEE
 
 Login into IKS using the commands below.
 
-Replace CLUSTER_ID_VALUEEEEEE with cluster id. ex: abcdefod0125spct9av0
-Replace NAMESPACE_VALUEEEEEE with namespace id. ex: bookinfo
+- Replace CLUSTER_ID_VALUEEEEEE with cluster id. ex: abcdefod0125spct9av0
+- Replace NAMESPACE_VALUEEEEEE with namespace id. ex: bookinfo
 
 
 ```bash
