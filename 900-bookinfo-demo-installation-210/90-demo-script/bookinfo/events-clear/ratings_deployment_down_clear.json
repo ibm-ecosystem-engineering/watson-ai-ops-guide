@@ -52,15 +52,15 @@
       ],
       "rows":[
          {
-            "Node":"ratings-v1-pod-id",
+            "Node":"ratings-v1-deployment-id",
             "AlertGroup":"Availability",
             "AlertKey":"ServiceDown",
-            "Summary":"Rating Pod down",
-            "Identifier":"ratings-v1-pod-id",
+            "Summary":"Rating Service down",
+            "Identifier":"ratings-v1-deployment-id|2",
             "OwnerGID":0,
             "Severity":5,
             "OwnerUID":0,
-            "Type":1,
+            "Type":2,
             "Manager":"CEM",
             "ScopeID":"BookInfoD",
             "Customer":"BookInfoDEnterprise"

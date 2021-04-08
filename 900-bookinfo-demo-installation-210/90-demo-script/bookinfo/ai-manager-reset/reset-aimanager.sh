@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "clear aimanager started ..... $(date)"
+echo "reset aimanager started ..... $(date)"
 
 source ./config.sh
 
@@ -15,6 +15,9 @@ echo ""
 read  -p "Are you sure to run the cleanup script (y/n) : " answer
 
 if [ "$answer" != "${answer#[Yy]}" ] ;then
+
+        #### OCP login 
+        oc login --token=$OCP_TOKEN --server=$OCP_SERVER
 
         ##  Switch namesapce
         oc project $NAMESAPCE
@@ -82,4 +85,4 @@ else
         echo "Process ..stopped"
 fi
 
-echo "clear aimanager completed ..... $(date)"
+echo "reset aimanager completed ..... $(date)"

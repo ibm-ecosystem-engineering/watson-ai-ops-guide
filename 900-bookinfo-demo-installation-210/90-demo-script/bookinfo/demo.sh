@@ -7,9 +7,11 @@ menu_option_1() {
   date1=$(date '+%Y-%m-%d %H:%M:%S')
   echo "Introduce anomaly into ratings Service in BookInfo App ...started ....$date1"
 
-  op1/create-events.sh
-  # op1/create-log-anamoly.sh
-  
+  iks/iks-login.sh
+  iks/scale-down.sh
+  events-push/push-events.sh
+  log-load/log-load-generate.sh
+
   date1=$(date '+%Y-%m-%d %H:%M:%S')
   echo "Introduce anomaly into ratings Service in BookInfo App...completed ....$date1"
 }
@@ -28,20 +30,24 @@ menu_option_4() {
 
 menu_option_5() {
   date1=$(date '+%Y-%m-%d %H:%M:%S')
-  echo "Clear events ...started ....$date1"
+  echo "Clear events and log anomaly ...started ....$date1"
   
-  op6/clear-events.sh
+  events-clear/clear-events.sh
+  iks/iks-login.sh
+  iks/scale-up.sh
 
   date1=$(date '+%Y-%m-%d %H:%M:%S')
-  echo "Clear events ...completed ....$date1"
+  echo "Clear events and log anomaly ...completed ....$date1"
 }
 
 menu_option_6() {
   date1=$(date '+%Y-%m-%d %H:%M:%S')
   echo "Reset ...started ....$date1"
   
-  op6/clear-events.sh
-  op6/clear-aimanager.sh
+  events-clear/clear-events.sh
+  iks/iks-login.sh
+  iks/scale-up.sh
+  ai-manager-reset/reset-aimanager.sh
 
   date1=$(date '+%Y-%m-%d %H:%M:%S')
   echo "Reset ...completed ....$date1"
@@ -57,15 +63,14 @@ incorrect_selection() {
   echo "Incorrect selection! Try again."
 }
 
-
+clear
 until [ "$selection" = "0" ]; do
-  clear
   echo ""
   echo "      Watson AI-Ops Demo "
   echo "      -------------------"
   echo ""
   echo "      1  -  Introduce anomaly into BookInfo App"
-  echo "      5  -  Clear events"
+  echo "      5  -  Clear events and log anomaly"
   echo "      6  -  Reset"
   echo ""
   echo "      0  -  Exit"
