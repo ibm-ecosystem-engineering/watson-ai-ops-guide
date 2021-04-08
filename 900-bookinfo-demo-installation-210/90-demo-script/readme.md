@@ -1,6 +1,6 @@
 # Demo Script
 
-## Update config.sh
+## 1. Update config.sh
 
 #### 1. OCP Server
 
@@ -44,7 +44,7 @@ OCP_TOKEN=""
 
 #### 3. IBM Cloud API Key
 
-1. Create IBM Cloud API Key for accessing IKS Cluster using the link [../../602-accessing-iks-cluster-using-api-key](../../602-accessing-iks-cluster-using-api-keys) 
+1. Create IBM Cloud API Key for accessing IKS Cluster using the link [../../602-accessing-iks-cluster-using-api-key](../../602-accessing-iks-cluster-using-api-key) 
 
 2. Update the below property.
 
@@ -68,6 +68,6 @@ Update the bookinfo app url
 APP_URL=http://1.1.1.1:31010/productpage?u=normal
 ```
 
-## Run the demo
+## 2. Run the demo
 
 Run `sh demo.sh` to start the demo
