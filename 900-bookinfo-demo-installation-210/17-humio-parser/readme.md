@@ -3,7 +3,7 @@
 Humio parser can be setup in humio to preprocess the logs.
 
 
-## 1. Close existing kv parser
+## 1. Clone existing kv parser
 
 <img src="images/parser0.png">
 
