@@ -2,7 +2,7 @@
 
 1. Open the file `01-create-load.sh`
 
-2. Update the bookinfo app url (http://1.2.3.4) with the actual bookinfo app url of yours.
+2. Update the bookinfo app url `http://1.2.3.4` with the actual bookinfo app url of yours.
 
 3. Make sure that `apache bench` is installed.
 
