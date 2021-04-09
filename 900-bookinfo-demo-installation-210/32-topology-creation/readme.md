@@ -6,28 +6,27 @@ To create topology for bookinfo in the Toplogy Manager follow the steps given.
 
 2. Run `01-create-topology-entities.sh`
 
-3. Run the Swagger URL /resources GET
+3. Run the Swagger URL `/resources GET` 
 
 Swager URL
 
 ```
-    https://noi-topology.aiops.aaaa-dal10-bbbb.us-south.containers.appdomain.cloud/1.0/topology/swagger#/
+https://noi-topology.aiops.aaaa-dal10-bbbb.us-south.containers.appdomain.cloud/1.0/topology/swagger#/
 ```
-
 
 _filter	
 ```    
-    tags=app:bookinfo
+tags=app:bookinfo
 ```
    
 _field
 ```    
-    uniqueId
+uniqueId
 ```
 
-tenentid
+tenentid. This is constant for all.
 ```    
-    cfd95b7e-3bc7-4006-a4a8-a73a79c71255
+cfd95b7e-3bc7-4006-a4a8-a73a79c71255
 ```
 
 The complete curl statement would be 
@@ -37,7 +36,13 @@ The complete curl statement would be
 
 ```
 
+<img src="images/image1.png">
+<img src="images/image2.png">
+<img src="images/image3.png">
+
 4. A json file format response would be generated. Copy the content into to 01-ids.json
+
+<img src="images/image4.png">
 
 5. Run `02-create-links-matchtoken.sh`
 
