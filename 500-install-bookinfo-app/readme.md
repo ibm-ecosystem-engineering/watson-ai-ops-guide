@@ -2,7 +2,12 @@
 
 This article explains about how to install BookInfo app in Kubernetes or Openshift
 
-1. Download Book info manifests files using the link https://istio.io/latest/docs/examples/bookinfo/
+1. Download Book info manifests files using the links
+
+ https://raw.githubusercontent.com/istio/istio/master/samples/bookinfo/platform/kube/bookinfo.yaml
+
+ https://istio.io/latest/docs/examples/bookinfo/
+
 
 2. Create a Namespace called `bookinfo`
 

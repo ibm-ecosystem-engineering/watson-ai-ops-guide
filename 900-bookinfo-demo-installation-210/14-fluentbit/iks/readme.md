@@ -6,7 +6,7 @@ https://docs.humio.com/docs/ingesting-data/log-formats/kubernetes/
 
 We have downloaded the same and available in the folder `humio-helm-charts`
 
-You can also refer  [here](../720-configuring-fluentbit),
+You can also refer  [here](../../../720-configuring-fluentbit),
 
 
 ## 1. Update Override.yaml
