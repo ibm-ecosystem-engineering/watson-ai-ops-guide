@@ -1,4 +1,4 @@
-# No training data found !!! Please check elastic index and data-prep logs
+# train_pipeline.py : source code string cannot contain null bytes
 
 ## Tags
 
