@@ -6,6 +6,8 @@ The article is based on the the following
  - RedHat OpenShift 4.5 on IBM Cloud (ROKS)
  - Watson AIOps 2.1
 
+<img src="images/architecture.png">
+
 Here are the steps involved.
 
 - 1: Watson AIOps (WA) 2.1 Installation
