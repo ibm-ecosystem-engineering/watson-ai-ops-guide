@@ -20,7 +20,6 @@ kubectl create ns bookinfo
 kubectl apply -f bookinfo.yaml
 ```
 
-3. You can follow steps given [here](../500-install-bookinfo-app), to access the bookinfo app.
+3. You can follow steps given [here](../../500-install-bookinfo-app), to access the bookinfo app.
 
-## Reference:
 
