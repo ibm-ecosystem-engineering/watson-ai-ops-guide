@@ -156,14 +156,17 @@ Use https://www.epochconverter.com/ for time conversion.
 
 Here are some important info about the download.
 
-- 1. Maximum no. of lines can be downloaded is `10000`
-- 2. Download starts from `FROM` time and go until it reaches `TO` time limit or `10000` lines of log.
-- 3. It is better to have 1 second difference between `FROM` and `TO`, so that it may not reach `10000` log lines (hopefully, otherise go with 500 millisec or 100 millsec). 
-- 4. To download 10 minutes, log we need to call this url 600 times (10 times of 60 secs).
+1. In a single request, maximum no. of lines can be downloaded is `10000`
+2. Download starts from `FROM` time and go until it reaches `TO` time limit or `10000` lines of log.
+3. It is better to have 1 second difference between `FROM` and `TO`, so that it may not reach `10000` log lines (hopefully, otherise go with 500 millisec or 100 millsec). 
+4. To download 10 minutes, log we need to call this url 600 times (10 times of 60 secs).
+
+
+There is a script `./scripts/01-download-logdna-logs.sh` available to download logs using API.
 
 ### 5.2 Update config.sh
 
-Lets us assume, if you want to download `10 minutes` of logs from `Friday, 16 April 2021 01:10:00 GMT+05:30`
+Lets us assume, you want to download `10 minutes` of logs from `Friday, 16 April 2021 01:10:00 GMT+05:30`. We can update the config file accordingly.
 
 `config.sh` is available in `./scripts/00-config.sh`
 
@@ -195,7 +198,7 @@ LOG_DNA_KEY=
 
 ### URL_PART_1
 
-Update the URL, most there would be change only in the `eu-gb` part.
+Update the URL. Mostly there would be a change only in the `eu-gb` part.
 
 ```
 URL_PART_1="https://api.eu-gb.logging.cloud.ibm.com/v1/export?prefer=head&from="
