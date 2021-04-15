@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
 URL_PREFIX=https://noi-topology.aiops.aaaa-dal10-bbbb.us-south.containers.appdomain.cloud/1.0/topology
-TENENT_ID=cfd95b7e-3bc7-4006-a4a8-a73a79c71255
-DATA_CENTER=bookinfodatacenter
 NOI_REST_USR=noi-topology-aiops-user
 NOI_REST_PWD=
+
+TENENT_ID=cfd95b7e-3bc7-4006-a4a8-a73a79c71255
+DATA_CENTER=bookinfodatacenter
 
 JOB_ID=bookinfo-job
 

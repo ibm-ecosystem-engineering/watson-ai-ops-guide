@@ -2,13 +2,13 @@
 
 ## 1 Humio Logs
 
- 1. Download the logs using the link 
+1. Download the logs using the link 
 
  [../../710-configuring-humio](../../710-configuring-humio)
 
  Section : 4. Download Logs from Humio
 
- 2. Copy the downloaded logs file to `/training-files/1/logs.json`
+2. Copy the downloaded logs file to `/training-files/1/logs.json`
 
 3. Run the below command to see, how much lines of log the file contains.
 
@@ -38,20 +38,27 @@ Here each service should contain more than `2000` records.
 
 Section : 5. Download Logs from LogDNA using Script
 
-2. Run the below command to see, how much lines of log the file contains.
+2. Copy the downloaded logs file to `/training-files/1/logs.json`
+
+3. Run the below command to see, how much lines of log the file contains.
 
 ```bash
 
 cd training-files/1
 
 cat logs.json | jq ."_app" | sort | uniq -c
+
 ```
 
 It may give results like this
 
 ```
-   4 "nginx-ingress"
-   3 "prometheus-operator"
+$ cat myLog.json | jq ."_app" | sort | uniq -c
+7492 "details"
+71174 "productpage"
+3746 "ratings"
+7492 "reviews"
 ```
 
 Here each service should contain more than `2000` records.
+

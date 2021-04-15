@@ -2,7 +2,7 @@
 
 ## 1. Update Config.sh
 
-Update the parameters in `/scripts/00-config.sh`
+Update the parameters in  `/scripts/00-config.sh`
 
 ## 2. Start Training
 

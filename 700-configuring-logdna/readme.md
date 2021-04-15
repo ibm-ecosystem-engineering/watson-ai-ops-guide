@@ -128,54 +128,122 @@ You might have received enough logs in the LogDNA for training.
 
 You can download logs from the UI. It can export the lines currently filtered and it will sent a link to mail for download. But there is a restriction in size. 
 
-It is better to use scripts to download the logs.
+It is better to use API to download the logs.
 
 <img src="images/04-logdna-export1.png">
 
 <img src="images/04-logdna-export2.png">
 
-## 5. Download Logs from LogDNA using Script
+## 5. Download Logs from LogDNA using API
 
-You can download logs from logdna through scripts. It is better to use scripts to download the logs. 
+### 5.1 Overview
 
+You can download logs from logdna through APIs.
 
-Here is the script to download logs between a time range.
+Here is the curl script to download logs between a time range.
 
 ```
-curl "https://api.us-south.logging.cloud.ibm.com/v1/export?from=1613239459000&to=1613246659000&size=10000" -u LOG_DNA_SERVICE_KEY >> log.txt
+curl "https://api.us-south.logging.cloud.ibm.com/v1/export?prefer=head&from=1613239459000&to=1613246659000&size=10000" -u LOG_DNA_SERVICE_KEY >> log.txt
 ```
 
 - LOG_DNA_SERVICE_KEY : LogDNA Service Key
 - 1613239459000 : From time InMilliseconds
 - 1613239459000 : To time InMilliseconds
 - 10000 : No. of lines to be downloaded
+- prefer=head : Gets log in increasing time order.
 
 Use https://www.epochconverter.com/ for time conversion.
 
+Here are some important info about the download.
 
-It is better to download 10K Lines of log at a time.
+- 1. Maximum no. of lines can be downloaded is `10000`
+- 2. Download starts from `FROM` time and go until it reaches `TO` time limit or `10000` lines of log.
+- 3. It is better to have 1 second difference between `FROM` and `TO`, so that it may not reach `10000` log lines (hopefully, otherise go with 500 millisec or 100 millsec). 
+- 4. To download 10 minutes, log we need to call this url 600 times (10 times of 60 secs).
 
-### To download logs from 10:30 AM to 10:45 AM today
+### 5.2 Update config.sh
 
-1. Split the time into 5 minutes slab like 
-  - 10:30 to 10:35
-  - 10:36 to 10:40
-  - 10:41 to 10:45
+Lets us assume, if you want to download `10 minutes` of logs from `Friday, 16 April 2021 01:10:00 GMT+05:30`
 
-2. Take the first slab, convert the from-time and to-time using epoch covertor.
+`config.sh` is available in `./scripts/00-config.sh`
 
-3. Update the script with the from-time and to-time and run the script.
+#### START_TIME
+
+Convert the start time value Start Time : `Friday, 16 April 2021 01:10:00 GMT+05:30` using  https://www.epochconverter.com/ .
+
+The value would be `1618515600`. Update the value in the below param.
 
 ```
-curl "https://api.us-south.logging.cloud.ibm.com/v1/export?from=1613239459000&to=1613246659000&size=10000" -u LOG_DNA_SERVICE_KEY >> log.txt
+START_TIME=1618515600
 ```
 
-4. Hope you might have received all the records between the time. Verify that by converting the timestamp in the last lines of the log. Otherwise decrease the slab from 5 minutes to 4 and so on.
+#### TOTAL_MINUTES
 
-5. Repeat the steps for each slap. For each slab the file get append to log.txt as we use >>
+How much minutes logs you want, you can specify here.
 
-6. Now the logs are downloaded and available in log.txt.
+```
+TOTAL_MINUTES=10
+```
+
+### LOG_DNA_KEY
+
+Give the logDNA Key here.
+
+```
+LOG_DNA_KEY=
+```
+
+### URL_PART_1
+
+Update the URL, most there would be change only in the `eu-gb` part.
+
+```
+URL_PART_1="https://api.eu-gb.logging.cloud.ibm.com/v1/export?prefer=head&from="
+```
+
+### 5.3 Download
+
+Run the below command to start the download
+
+```
+cd scripts
+sh 01-download-logdna-logs.sh
+```
+
+It would take few minutes to download. The logs files would available here
+
+```
+./temp-gan/myLog.json
+```
+
+### 5.4 Verify log lines size
+
+It is required to have 2000 lines of logs for each app/microservice.
+
+We can check that using the below command.
+
+```
+cat myLog.json | jq ."_app" | sort | uniq -c
+```
+
+It may print the output like this.
+
+```
+$ cat myLog.json | jq ."_app" | sort | uniq -c
+7492 "details"
+   2 "nginx-ingress"
+71174 "productpage"
+3746 "ratings"
+7492 "reviews"
+```
+
+You can see all the services are having more than 2000 lines.
+
+The `nginx-ingress` is not required and it can be removed from the log file manually.
 
 
+## Reference
 
+Exporting logs programmatically
+https://cloud.ibm.com/docs/log-analysis?topic=log-analysis-export_api
 

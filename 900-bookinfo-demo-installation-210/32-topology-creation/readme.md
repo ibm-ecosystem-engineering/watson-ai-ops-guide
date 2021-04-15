@@ -2,7 +2,16 @@
 
 To create topology for bookinfo in the Toplogy Manager follow the steps given.
 
-1. Update `00-config.sh` with the details.
+1. Update the below properties in `00-config.sh`.
+
+```
+URL_PREFIX=
+NOI_REST_USR=
+NOI_REST_PWD=
+```
+
+The usr and pwd should be from 
+
 
 2. Run `01-create-topology-entities.sh`
 
