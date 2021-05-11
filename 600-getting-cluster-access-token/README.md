@@ -87,9 +87,9 @@ curl -X GET https://c111-e.us-south.containers.cloud.ibm.com:11111/api/v1/nodes 
 
 ```
 
-## 2. Encrypt the token using noi-topology-topology pod
+## 2. Encrypt the token using topology-topology pod
 
-Encrypt the token using the noi-topology pod.
+Encrypt the token using the topology-topology pod.
 
 ### Login to the OCP (Watson AI-Ops Installed cluster)
 
@@ -109,10 +109,10 @@ ex:
  oc project aiops21
 ```
 
-2. Get into the pod `noi-topology-topology`
+2. Get into the pod `topology-topology`
 
 ```
- oc exec -it $(oc get po |grep noi-topology-topology|awk '{print $1}') bash
+ oc exec -it $(oc get po |grep topology-topology|awk '{print $1}') bash
 ```
 
 3. Encrypt the token
@@ -123,13 +123,14 @@ Run the below command by replacing the << TOKEN >> with the target cluster acces
  java -jar /opt/ibm/topology-service/topology-service.jar encrypt_password --password '<< TOKEN >>'
 ```
 
+OR
+
+```
+ oc exec -ti <xxxxxxxxx>-topology-topology-<xxxxxxxxx-xxxxx> -- java -jar /opt/ibm/topology-service/topology-service.jar encrypt_password -p '<< TOKEN >>' > <encrypted_sa_token.txt>
+```
+
+
 ## Notes and Reference 
 
 This document is useful when you are configuring observer job in ASM 
 [here](../400-topology-observer-job-config) . 
-
-
-
-
-
-
