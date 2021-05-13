@@ -20,41 +20,14 @@ oc project devaiops
 
 ## Expose Strimzi Kafka Brokers (one time only)
 
-1. Edit the strimzi cluster
+1. Patch the strimzi cluster
 
     ```
-    oc edit kafka/strimzi-cluster
-    ```
-
-2. Add the following property under `spec.kafka.listeners`:
+oc patch Kafka strimzi-cluster -p '{"spec": {"kafka": {"listeners": {"external": {"type": "route"}}}}}' --type=merge
 
     ```
-    external:
-      type: route
-    ```
 
-    The manifest would be like this.
-
-    ```
-    apiVersion: kafka.strimzi.io/v1beta1
-    kind: Kafka
-    # ...
-    metadata:
-    # ...
-    spec:
-    kafka:
-        # ...
-        listeners:
-        # ...
-        external:
-            type: route
-        # ...
-
-        external:
-        type: route
-    ```
-
-3. After few seconds, the routes should be created. 
+2. After few seconds, a route should be created. 
 
     Run the below command.
 
