@@ -22,10 +22,10 @@ oc project devaiops
 
 1. Patch the strimzi cluster
 
-    ```
+```
 oc patch Kafka strimzi-cluster -p '{"spec": {"kafka": {"listeners": {"external": {"type": "route"}}}}}' --type=merge
 
-    ```
+```
 
 2. After few seconds, a route should be created. 
 
